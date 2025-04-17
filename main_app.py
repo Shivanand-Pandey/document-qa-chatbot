@@ -36,11 +36,6 @@ gradio_app = gradio_interface.create_ui()
 app = gr.mount_gradio_app(app, gradio_app, path="/")
 
 
-def setup_sample_document():
-    sample_doc_path = config.ASSETS_DIR / "The_Gift_of_the_Magi.pdf"
-    if not sample_doc_path.exists():
-        logger.info("Sample document not found, please place 'The_Gift_of_the_Magi.pdf' in the assets directory")
-
 
 if __name__ == "__main__":
 
